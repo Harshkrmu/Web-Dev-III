@@ -27,3 +27,5 @@
 
 // calculator(process.argv[2])
 
+console.log(process.env.password)
+console.log(process.env.secret_key)
