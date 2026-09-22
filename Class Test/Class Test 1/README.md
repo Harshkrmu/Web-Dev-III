@@ -1,0 +1,1 @@
+# Q1. Create a server with the help of http module and listen that server on port number 3000, In this server create 3 url's, /home, /about, /contact and respond to the client according to these url's home page, about page, contact page respectively and also console method, url and headers on each request.
