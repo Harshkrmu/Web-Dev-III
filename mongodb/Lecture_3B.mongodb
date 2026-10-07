@@ -1,0 +1,31 @@
+use("AIML")
+
+// db.students.find(
+//     {"course":"CSE"}).explain("executionStats")
+
+// db.students.createIndex(
+//     {"course":1}
+// )
+
+// db.students.getIndexes()
+
+// COMPOUND INDEX
+
+// db.students.find(
+//     {"course":"BBA",
+//         "age": 21}).explain("executionStats")
+
+// db.students.find({attendance:95}).explain("executionStats")
+
+// db.students.find(
+//     {"course":"CSE"}).explain("executionStats")
+
+// db.students.dropIndex("coursee_1_age_1")
+
+// CREATE TEXT INDEX
+
+// db.user.createIndex({description:"text"})
+
+// db.user.find(
+//     {$text:{$search:"promise"}})
+

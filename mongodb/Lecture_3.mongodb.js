@@ -51,3 +51,47 @@ use("AIML")
 //     }
 // ])
 
+// db.students.aggregate([
+//     {
+//         $match:{
+//             "course":"BCA"
+//         }
+//     },
+//     {
+//         $group:{
+//             _id:null,
+//             maxMathMarks:{$max:"$marks.math"},
+//         }
+//     },
+// ])
+
+// db.students.aggregate([
+//     {
+//         $match:{
+//             "course":"CSE",
+//             "attendance":{$gt:80}
+//         }
+//     },
+//     {
+//         $group:{
+//             _id:null,
+//             numberOfstudents:{$sum:1}
+//         }
+//     }
+// ])
+
+db.students.aggregate([
+    {
+        $project: {
+            name: 1,
+            totalMarks: {
+                $add : ["$marks.math","$marks.dbms","$marks.web"]
+            }
+        }
+    },
+    {
+        $sort: {
+            totalMarks: -1
+        }
+    }
+])
